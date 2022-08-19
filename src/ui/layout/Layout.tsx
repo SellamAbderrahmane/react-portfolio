@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { Animator, Social } from '../components';
 
 import './layout.css';
@@ -7,6 +7,12 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 
 export function Layout() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <div className="layout">
       <Header />
@@ -14,7 +20,7 @@ export function Layout() {
       <Animator className="content container">
         <Outlet />
       </Animator>
-      <Social />
+      {/* <Social /> */}
     </div>
   );
 }

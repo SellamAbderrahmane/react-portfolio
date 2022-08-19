@@ -16,6 +16,12 @@ export default function App() {
   return (
     <PortfolioProvider>
       <AnimatePresence exitBeforeEnter>
+        {/* <Layout>
+          <AboutMe />
+          <Contact />
+          <Experience />
+          <Portfolio />
+        </Layout> */}
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Layout />}>
             <Route index element={<AboutMe />} />

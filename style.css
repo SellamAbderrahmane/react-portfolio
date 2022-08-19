@@ -27,7 +27,7 @@ html {
 }
 
 body {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   width: 100%;
   min-height: 100%;
@@ -36,8 +36,9 @@ body {
   background-color: var(--bg-color);
   color: var(--sec-text-color);
   font-family: var(--font-sans);
-  font-size: var(--fz-xs);
+  font-size: var(--fz-sm);
   line-height: 24px;
+  box-sizing: border-box;
 }
 
 body,
@@ -45,8 +46,6 @@ div[id='root'] {
   padding: 0;
   margin: 0;
   height: 100%;
-  overflow: auto;
-  box-sizing: border-box;
 }
 
 a {
@@ -111,4 +110,8 @@ a {
   width: 1px;
   height: 130px;
   background-color: var(--sec-text-color);
+}
+
+section {
+  height: 100%;
 }

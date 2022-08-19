@@ -57,7 +57,7 @@
   /* position: absolute; */
   flex-direction: var(--nav-bar-direction);
   width: var(--nav-width);
-  background-color: var(--sec-bg-color);
+  /* background-color: var(--sec-bg-color); */
 }
 
 .nav-bar .logo img {
@@ -70,11 +70,13 @@
   flex: 1;
   display: flex;
   flex-direction: var(--nav-bar-direction);
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  padding-bottom: 1em;
 }
 
 .nav-bar nav .nav-item {
+  position: relative;
   gap: 0.6em;
   display: flex;
   /* flex-direction: column; */
@@ -83,15 +85,27 @@
 
   text-decoration: none;
   overflow: hidden;
-  margin: 8px 0;
-  padding: 13px 16px;
-  font-size: 14px;
+  padding: 0.5em 1em;
+  font-size: var(--fz-md);
   text-align: center;
   border-radius: 10px;
   color: var(--dark-color);
+
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
 }
 
-.nav-bar nav .nav-item span {
+.nav-bar nav .nav-item::after {
+  content: '';
+  position: absolute;
+  top: 0.5em;
+  left: 0.6em;
+  height: 50%;
+  width: 1px;
+  background-color: var(--primary);
+}
+
+/* .nav-bar nav .nav-item span {
   opacity: 0;
   visibility: hidden;
   left: var(--nav-width);
@@ -101,7 +115,7 @@
   text-align: center;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
+} */
 
 .nav-bar nav .nav-item:hover span {
   opacity: 1;
@@ -112,7 +126,6 @@
 
 .content {
   grid-area: main;
-  height: 100%;
   overflow: hidden;
   /* margin-left: var(--nav-width); */
 }
@@ -129,9 +142,22 @@
     --nav-width: 100%;
     --nav-bar-direction: row;
     --layout-template-columns: auto;
-    --layout-template-rows: 90px auto 1fr;
-    --layout-template-areas: 'header' 'sidenav' 'main';
+    --layout-template-rows: 90px 1fr auto;
+    --layout-template-areas: 'header' 'main' 'sidenav';
     padding: 0 !important;
+  }
+
+  .nav-bar nav .nav-item {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+  }
+
+  .nav-bar nav .nav-item::after {
+    height: 1px;
+    width: 50%;
+    bottom: 0;
+    left: 1em;
+    top: inherit;
   }
 
   .nav-bar nav .nav-item span {
