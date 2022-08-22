@@ -1,0 +1,8 @@
+@keyframes page-title-animate {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 30%;
+  }
+}

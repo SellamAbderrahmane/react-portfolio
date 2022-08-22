@@ -7,7 +7,7 @@ export function AboutMe() {
     <React.Fragment>
       <h2 className="page-title">About Me</h2>
       <div className="about">
-        <h1>Hi, I am here to help your next project!</h1>
+        <h2>Hi, I am here to help your next project!</h2>
         <p>
           Hello, I am Abderrahmane, professional full stack web development. I
           am working remotely on projects for clients. My skills is building web
