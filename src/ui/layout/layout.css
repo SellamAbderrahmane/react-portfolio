@@ -130,7 +130,7 @@
   /* margin-left: var(--nav-width); */
 }
 
-.active svg {
+.active {
   font-weight: 500;
   color: var(--pri-text-color) !important;
   /* border: 1.5px solid var(--pri-text-color); */

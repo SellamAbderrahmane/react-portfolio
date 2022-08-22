@@ -1,11 +1,11 @@
 :root {
-  --primary: #4eb5dd;
-  --secondary: #ffdd48;
-  --item-bg: #5add4e;
-  --pri-text-color: #066163;
-  --sec-text-color: #f2f2f2;
-  --dark-text-color: #393e46;
-  --bg-color: #383838;
+  --primary: #14adc6;
+  --secondary: #cccccc;
+  --item-bg: #a5e6bf;
+  --pri-text-color: #14adc6;
+  --sec-text-color: #cccccc;
+  --dark-text-color: #202327;
+  --bg-color: #202327;
   --sec-bg-color: #0a192f;
 
   --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system,
