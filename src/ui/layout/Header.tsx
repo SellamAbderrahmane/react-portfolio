@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { faGift } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const rr = require('/src/assets/plogo.png');
+import plogo from 'file!./../../assets/plogo.png';
 
 export function Header() {
   return (
     <header className="header container">
       <Link className="logo" to="/">
-        <img src={rr} />
+        <img src={plogo} />
       </Link>
       <nav>
         <ul className="h-list">
